@@ -131,7 +131,8 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(640, 480);
+  let cnv = createCanvas(640, 480);
+  cnv.parent('sketch-holder');
   video = createCapture(VIDEO, { flipped: true });
   video.size(width, height);
   video.hide();
